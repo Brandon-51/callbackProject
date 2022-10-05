@@ -9,7 +9,11 @@ Do not use the built in Array.map
 *******************************************************************************/
 
 function myMap(array, cb) {
-  // Your code here
+  let newEls = [];
+  for (let i = 0; i < array.length; i++) {
+    newEls.push(cb(array[i]))
+  }
+  return newEls;
 }
 let result1 = myMap([100, 25, 81, 64], Math.sqrt);
 console.log(result1); // [ 10, 5, 9, 8 ]
